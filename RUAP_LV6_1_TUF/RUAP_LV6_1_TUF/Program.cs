@@ -1,11 +1,4 @@
-﻿
-
-// This code requires the Nuget package Microsoft.AspNet.WebApi.Client to be installed.
-// Instructions for doing this in Visual Studio:
-// Tools -> Nuget Package Manager -> Package Manager Console
-// Install-Package Microsoft.AspNet.WebApi.Client
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
@@ -43,7 +36,7 @@ namespace CallRequestResponseService
                             new StringTable()
                             {
                                 ColumnNames = new string[] {"MPG", "Cyl", "Displacement", "Horsepower", "Weight", "Acceleration", "Year", "CountryCode", "Model"},
-                                Values = new string[,] {  { "0", "0", "0", "0", "0", "0", "0", "0", "value" },  { "0", "0", "0", "0", "0", "0", "0", "0", "value" },  }
+                                Values = new string[,] {  { "12", "4", "250", "120", "2500", "11", "70", "1", "value1" },  { "15", "6", "350", "110", "4500", "15", "70", "1", "value2" },  }
                             }
                         },
                     },
@@ -51,10 +44,10 @@ namespace CallRequestResponseService
                     {
                     }
                 };
-                const string apiKey = "S2kScyzvKVeZSJfXpqGsQE4PYCjtGCeXRUiiv2NXZqddOuTL39YAPkyUXVXRBJByRJ8cTakwdheWInZD2VaiGQ=="; // Replace this with the API key for the web service
+                const string apiKey = "5jc7Zbi1AgxsvlQaz1edeS2OrX9cwDyqIBISUg53zftfhFpEmhTyFpMLM5VVQps/DK9Hc4CRBE6RMMII7agjFw=="; // Replace this with the API key for the web service
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
 
-                client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/a4bc090290d447d689ae2c0fc656e79f/services/eb91c56fd8f94ef0ab40c3fc5ae7acbd/execute?api-version=2.0&details=true");
+                client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/a4bc090290d447d689ae2c0fc656e79f/services/ad5697d15a0d4845b271816fddd21f7c/execute?api-version=2.0&details=true");
 
                 // WARNING: The 'await' statement below can result in a deadlock if you are calling this code from the UI thread of an ASP.Net application.
                 // One way to address this would be to call ConfigureAwait(false) so that the execution does not attempt to resume on the original context.
