@@ -43,7 +43,7 @@ namespace CallRequestResponseService
                             new StringTable()
                             {
                                 ColumnNames = new string[] {"Recency", "Frequency", "Monetary", "Time", "Class"},
-                                Values = new string[,] {  { "3", "20", "9000", "50", "0" },  { "2", "12", "5000", "25", "1" },  }
+                                Values = new string[,] {  { "2", "25", "3500", "35", "1" },  { "3", "30", "4500", "30", "0" },  }
                             }
                         },
                     },
@@ -51,10 +51,10 @@ namespace CallRequestResponseService
                     {
                     }
                 };
-                const string apiKey = "YTxBle304PK0LgYPbJh2V8LMMfiJI34s2cVN/ZpW9p+zapmWJ0OB8WhneL4YBVJL5ydnwyX8pqoOcxS9fUJVHw=="; // Replace this with the API key for the web service
+                const string apiKey = "N9D6N2Kyh1AZt8wLbEif8/K6DkpA31xOEs7P3l9xwewcVSQRMB43Gj6vtZG8JXsaomDmOdk1HcOa0WVXbOJR6g=="; // Replace this with the API key for the web service
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
 
-                client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/a4bc090290d447d689ae2c0fc656e79f/services/60114ce56ec84eaa80d575164152caa9/execute?api-version=2.0&details=true");
+                client.BaseAddress = new Uri("https://ussouthcentral.services.azureml.net/workspaces/a4bc090290d447d689ae2c0fc656e79f/services/d2b5fb584d7a45b39e2f8ed469ec396b/execute?api-version=2.0&details=true");
 
                 // WARNING: The 'await' statement below can result in a deadlock if you are calling this code from the UI thread of an ASP.Net application.
                 // One way to address this would be to call ConfigureAwait(false) so that the execution does not attempt to resume on the original context.
